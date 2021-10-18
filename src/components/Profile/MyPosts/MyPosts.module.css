@@ -1,0 +1,43 @@
+.postsBlock {
+    padding: 10px;
+}
+
+.posts {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.entry {
+
+}
+
+.entry h3 {
+    line-height: 2px;
+    font-weight: 400;
+}
+
+.entryField {
+    display: flex;
+}
+
+.entryField textarea {
+    border: 2px solid #323333;
+    border-radius: 20px;
+    width: 300px;
+    height: 100px;
+    resize: none;
+    padding: 20px;
+}
+
+.entryField button {
+    height: 40px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 105px;
+    border: 2px solid #fcaf18;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #323333;
+    cursor: pointer;
+    background-color: #fff;
+}
