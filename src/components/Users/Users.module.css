@@ -1,4 +1,18 @@
-.usersContent {
+.usersWrapper {
     display: grid;
     grid-template-columns: repeat(3, 300px);
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.page {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.selected {
+    font-weight: bold;
 }

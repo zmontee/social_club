@@ -1,4 +1,4 @@
-import {FOLLOW, SET_USERS, UNFOLLOW} from "../types";
+import {FOLLOW, SET_CURRENT_PAGE, SET_USERS, UNFOLLOW} from "../types";
 
 const initialState = {
     users: [
@@ -50,11 +50,13 @@ const initialState = {
             status: 'Drink vodka and play dotka',
             isFollow: false
         }*/
-    ]
+    ],
+    pageSize: 6,
+    totalUsersCount: 29,
+    currentPage: 1
 }
 
 const usersReducer = (state = initialState, action) => {
-
     switch(action.type) {
         case SET_USERS:
             return {
@@ -81,6 +83,11 @@ const usersReducer = (state = initialState, action) => {
                     return u;
                 })
             }
+        case SET_CURRENT_PAGE:
+            return {
+                ...state,
+                currentPage: action.currentPage
+            }
         default:
             return state;
     }
@@ -89,5 +96,6 @@ const usersReducer = (state = initialState, action) => {
 export const setUsersAC = (users) => ({type: SET_USERS, users});
 export const followAC = (userId) => ({type: FOLLOW, userId});
 export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
+export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
 
 export default usersReducer;
